@@ -1,3 +1,4 @@
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -24,12 +25,7 @@ kotlin {
             isStatic = true
         }
     }
-    
-    js {
-        browser()
-        binaries.executable()
-    }
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         browser()
@@ -50,6 +46,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation("eu.iamkonstantin.kotlin:gadulka:1.7.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

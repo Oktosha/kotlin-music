@@ -1,4 +1,4 @@
-TEAM_ID=
+TEAM_ID=4SM3NU6AA4
 
 PRODUCT_NAME=MusicDemo
 PRODUCT_BUNDLE_IDENTIFIER=com.example.musicdemo.MusicDemo$(TEAM_ID)
